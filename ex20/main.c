@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jturunen <jturunen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/28 14:42:59 by jturunen          #+#    #+#             */
-/*   Updated: 2021/10/28 16:00:48 by jturunen         ###   ########.fr       */
+/*   Created: 2021/11/01 18:31:14 by jturunen          #+#    #+#             */
+/*   Updated: 2021/11/01 18:55:15 by jturunen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	<unistd.h>
+#include <stdio.h>
 
-void	ft_putchar(char c)
+char	*ft_strdup(char *str);
+
+int	main(void)
 {
-	write(1, &c, 1);
+	char	*source;
+	char	*copy;
+
+	source = "good jobben";
+	copy = ft_strdup(source);
+	printf("%s \n", source);
+	printf("%s \n", copy);
+	return (0);
 }

@@ -1,18 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jturunen <jturunen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/28 14:42:59 by jturunen          #+#    #+#             */
-/*   Updated: 2021/10/28 16:00:48 by jturunen         ###   ########.fr       */
+/*   Created: 2021/11/01 19:32:41 by jturunen          #+#    #+#             */
+/*   Updated: 2021/11/01 19:58:30 by jturunen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	<unistd.h>
+#include <stdio.h>
 
-void	ft_putchar(char c)
+int	*ft_range(int min, int max);
+
+int	main(void)
 {
-	write(1, &c, 1);
+	int	*result;
+	int	loop;
+	int	mini;
+	int	maxi;
+
+	printf("Give first int: ");
+	scanf("%d", &mini);
+	printf("Give second int: ");
+	scanf("%d", &maxi);
+	result = ft_range(mini, maxi);
+	loop = 0;
+	while (loop < maxi - mini)
+	{
+		printf("%d ", result[loop]);
+		loop++;
+	}
+	return (0);
 }

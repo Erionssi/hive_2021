@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jturunen <jturunen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/28 14:42:59 by jturunen          #+#    #+#             */
-/*   Updated: 2021/10/28 16:00:48 by jturunen         ###   ########.fr       */
+/*   Created: 2021/11/01 13:21:20 by jturunen          #+#    #+#             */
+/*   Updated: 2021/11/01 13:24:59 by jturunen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	<unistd.h>
-
-void	ft_putchar(char c)
+int	ft_strlen(char *str)
 {
-	write(1, &c, 1);
+	int	i;
+
+	i = 0;
+	while (str[i] != 0)
+		i++;
+	return (i);
 }
