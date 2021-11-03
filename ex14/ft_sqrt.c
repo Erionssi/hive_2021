@@ -6,7 +6,7 @@
 /*   By: jturunen <jturunen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 12:22:06 by jturunen          #+#    #+#             */
-/*   Updated: 2021/11/02 14:40:59 by jturunen         ###   ########.fr       */
+/*   Updated: 2021/11/03 10:11:08 by jturunen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@ int	ft_sqrt(int nb)
 	int	square;
 	int	i;
 
+	square = 0;
+	i = 1;
 	while (i <= nb / 2)
 	{
 		square = i * i;
